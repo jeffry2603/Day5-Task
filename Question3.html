@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//1.
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const odds = arr.filter(number => {
+  return number % 2 !== 0;
+});
+
+console.log(odds); 
+
+//3.
+sum = (a, b) => {
+  return(a+b)
+}
+  x= sum(34,87)
+  console.log(x)
+
+  //4.
+  const newArray = [1, 3, 2, 5, 10];
+const myPrimeArray = newArray.filter(element => {
+    for (let i = 2; i < element; i++) {
+        if (element % i === 0) return false;
+    }
+    return element !== 1;
+});
+console.log(myPrimeArray);
+
+//5.
+const getAllPalindromes = (words) => {
+ return words.filter((word) => {
+  word.split("").reverse().join("") === word;
+  });
+};
+
+console.log(getAllPalindromes(["hello", "noon"]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

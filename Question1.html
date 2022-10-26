@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 1
+function Odd(numbers) {
+    if (numbers % 2 != 0) {
+        return true;
+    }
+    return false;
+
+}
+var input = 33;
+var result = Odd(input);
+console.log(result)
+//Outpur: true
+
+
+//2.
+
+// Using map(), replace(), for loop we can convert string to title case
+
+
+
+// 3.
+
+const sum = [1, 2, 3].reduce(add, 0); 
+function add(accumulator, a) {
+  return accumulator + a;
+}
+
+console.log(sum)
+
+
+
+
+// 4.
+const array = [-5, -3, -2, -1, ...Array(20).keys()]; 
+function isPrime(num) {
+  for (let start = 2; num > start; start++) {
+    if (num % start == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(array.filter(isPrime));
+
+//5.
+let palindromeArray = (arr) => {
+     
+     let isPalindrome = true;
+     
+     for(let i = 0; i < arr.length / 2; i++) {
+
+         if(arr[i] !== arr[arr.length - i - 1]){
+           isPalindrome = false; 
+           break;
+         }
+     }
+     
+     return isPalindrome;
+}
+console.log(palindromeArray([1,2,2,2]));
+
+//6.
+
+function getMedian(ar1, ar2, n){
+ let j = 0;
+ let i = n - 1;
+ while (ar1[i] > ar2[j] && j < n && i > -1)
+ {
+     let temp = ar1[i];
+     ar1[i] = ar2[j];
+     ar2[j] = temp;
+     i--; j++;
+ }
+ ar1.sort(function(a, b){return a - b});
+ ar2.sort(function(a, b){return a - b});
+ return parseInt((ar1[n - 1] + ar2[0]) / 2, 10);
+ }
+  
+ let ar1 = [ 1, 12, 15, 26, 38 ];
+ let ar2 = [ 2, 13, 17, 30, 45 ];
+
+ let n1 = 5;
+ let n2 = 5;
+ if (n1 == n2)
+ document.write("Median is "+ getMedian(ar1, ar2, n1));
+ else
+ document.write("Doesn't work for arrays of unequal size");
+  
+
+//7.
+var arr = ["apple", "mango", "apple",
+            "orange", "mango", "mango"];
+ 
+    function removeDuplicates(arr) {
+        return arr.filter((item,
+            index) => arr.indexOf(item) === index);
+    }
+ 
+    console.log(removeDuplicates(arr));
+
+    //8
+    
+function RightRotate(a, n, k)
+{
+
+	k = k % n;
+
+	for (let j = 0; i < n; i++) {
+		if (j < k) {
+
+			document.write(a[n + j - k] + " ");
+		}
+		else {
+			document.write((a[j - k]) + " ");
+		}
+	}
+	document.write("<br>");
+}
+let Array = [1, 2, 3, 4, 5];
+let N = Array.length;
+let K = 2;
+
+RightRotate(Array, N, K);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
